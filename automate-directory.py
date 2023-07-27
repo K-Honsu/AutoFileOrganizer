@@ -7,11 +7,13 @@ import shutil
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-source_dir = '/Users/oluwaferanmiadeyemi/Downloads'
-destination_sound = '/Users/oluwaferanmiadeyemi/Downloads/downloaded sounds'
-destination_music = '/Users/oluwaferanmiadeyemi/Downloads/downloaded music'
-destination_video = '/Users/oluwaferanmiadeyemi/Downloads/downloaded videos'
-destination_image = '/Users/oluwaferanmiadeyemi/Downloads/downloaded images'
+# ! FILL IN BELOW
+# ? folder to track e.g. Windows: "C:\\Users\\UserName\\Downloads"
+source_dir = ''
+destination_sound = ''
+destination_music = ''
+destination_video = ''
+destination_image = ''
 
 
 def makeUnique(dest, name):
@@ -55,7 +57,6 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s - %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
-    # path = sys.argv[1] if len(sys.argv) > 1 else '.'
     path = source_dir
     event_handler = MoverHandler()
     observer = Observer()
